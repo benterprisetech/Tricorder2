@@ -13,11 +13,7 @@ import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-public class ActiveMonitor extends AppCompatActivity {
-    private String[] mPlanetTitles;
-    private DrawerLayout mDrawerLayout;
-    private ListView mDrawerList;
-
+public class ActiveMonitor extends AppCompatActivity {;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,16 +31,6 @@ public class ActiveMonitor extends AppCompatActivity {
             }
         });
     }
-    /**@Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_active_monitor);
-
-        mDrawerLayout = findViewById(R.id.drawer_layout);
-
-        NavigationView navigationView = findViewById(R.id.nav_view);
-
-    }*/
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
