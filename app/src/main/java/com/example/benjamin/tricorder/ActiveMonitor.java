@@ -12,6 +12,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.app.Activity;
 
 public class ActiveMonitor extends AppCompatActivity {;
 
@@ -22,6 +23,14 @@ public class ActiveMonitor extends AppCompatActivity {;
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_active_monitor);
+        if (savedInstanceState == null) {
+            getFragmentManager().beginTransaction()
+                    //.add(R.id.container, CardFragment.newInstance())
+                    .commit();
+        }
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,6 +40,7 @@ public class ActiveMonitor extends AppCompatActivity {;
             }
         });
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
